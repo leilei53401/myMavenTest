@@ -9,6 +9,9 @@ public class GitTest {
             System.out.println("hello git!");
             
             System.out.println("test2");
+
+            System.out.println(" add dev test");
+
         } catch (Exception e) {
             e.printStackTrace();
         }
