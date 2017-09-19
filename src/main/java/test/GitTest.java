@@ -9,6 +9,9 @@ public class GitTest {
             System.out.println("hello git!");
             
             System.out.println("test2");
+
+            System.out.println("loca master  add");
+
         } catch (Exception e) {
             e.printStackTrace();
         }
