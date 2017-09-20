@@ -13,10 +13,12 @@ public class GitTest {
             System.out.println("loca master  add");
 
 
-            System.out.println(" add dev test");
+           // System.out.println(" add dev test"); //remote dell
 
 
             System.out.println(" local dev add test2");
+            
+            System.out.println("remote master add test");
 
         } catch (Exception e) {
             e.printStackTrace();
