@@ -27,8 +27,8 @@ public class GitTest {
 
 
             System.out.println("local master add 33333");
-            
-            
+
+
               System.out.println("remote master add 444444");
 
             //=========================================
