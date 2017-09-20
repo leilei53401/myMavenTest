@@ -28,6 +28,11 @@ public class GitTest {
 
             System.out.println("local master add 33333");
 
+            //=========================================
+
+            
+            System.out.println("local master add 4444");
+
         } catch (Exception e) {
             e.printStackTrace();
         }
