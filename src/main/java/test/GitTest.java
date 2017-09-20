@@ -19,6 +19,7 @@ public class GitTest {
             System.out.println(" local dev add test2");
             
             System.out.println("remote master add test");
+            System.out.println("remote master add test2222");
 
         } catch (Exception e) {
             e.printStackTrace();
