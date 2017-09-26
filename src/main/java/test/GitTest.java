@@ -52,6 +52,9 @@ public class GitTest {
             System.out.println("local master add 666666");
 
 
+            System.out.println("work add  new  11111");
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }
