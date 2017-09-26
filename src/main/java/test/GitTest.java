@@ -13,7 +13,13 @@ public class GitTest {
             System.out.println("loca master  add");
 
 
-           // System.out.println(" add dev test"); //remote dell
+
+            System.out.println("local master add 7777777");
+
+            System.out.println("remote master add from local 9999999");
+
+
+            // System.out.println(" add dev test"); //remote dell
 
 
             System.out.println(" local dev add test2");
@@ -29,21 +35,22 @@ public class GitTest {
             System.out.println("local master add 33333");
 
 
-              System.out.println("remote master add 444444");
-
             //=========================================
 
 
             System.out.println("local master add 4444");
             
             //-------------------------------------------
-               
-            System.out.println("remote master add 55555555");
-            
 
 
 
             System.out.println("local master add 55555555");
+
+
+
+
+            System.out.println("local master add 666666");
+
 
         } catch (Exception e) {
             e.printStackTrace();
