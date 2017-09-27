@@ -64,6 +64,8 @@ public class GitTest {
 
 
             System.out.println("work add  new  11111");
+            
+                System.out.println("remote add  999999999");
 
 
 
