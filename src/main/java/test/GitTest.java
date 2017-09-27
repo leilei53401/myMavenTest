@@ -66,6 +66,9 @@ public class GitTest {
             System.out.println("work add  new  11111");
 
 
+            System.out.println("work add  new  22222222");
+
+
 
         } catch (Exception e) {
             e.printStackTrace();
