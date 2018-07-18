@@ -1,5 +1,6 @@
 package jodatime;
 
+import org.apache.commons.lang.StringUtils;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
@@ -41,5 +42,30 @@ public class TodaTimeTest {
 	    String string_c = dateTime.toString("yyyy年MM月dd日 HH:mm:ss EE",Locale.CHINESE);  
 	    System.out.println(string_c);  
 	}
+
+    @Test
+    public void jodaTimeFromLong() {
+
+       /* DateTime dt = new DateTime(1526997609000l);
+        String strDt = dt.toString("yyyy-MM-dd HH:mm:ss");
+        System.out.println(strDt);*/
+        DateTime dt = new DateTime();
+        int keepSize=1;
+        DateTime dt2 = dt.plusDays(-keepSize);
+        System.out.println(dt.toString());
+        System.out.println(dt2.toString());
+
+    }
+
+    @Test
+    public  void replaceTest(){
+        String str = "2018-06-03 03:04:05";
+        String str2 = str.replaceAll("-| |:","");
+        System.out.println(str);
+        System.out.println(str2);
+        //错误：无法直接替换所有匹配字符。
+        String str3 = StringUtils.replace(str,"-| |:","");
+        System.out.println(str3);
+    }
 
 }

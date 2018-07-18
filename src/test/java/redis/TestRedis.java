@@ -10,7 +10,7 @@ import java.util.Map.Entry;
 public class TestRedis {
 
 //	private static final String SERVER_ADDRESS = "172.16.42.21";	//服务器地址
-	private static final String SERVER_ADDRESS = "192.168.2.3";	//服务器地址
+	private static final String SERVER_ADDRESS = "192.168.2.5";	//服务器地址
 	private static final Integer SERVER_PORT = 6379 ;	//端口
 	
 	private Jedis jedis ;
@@ -127,5 +127,53 @@ public class TestRedis {
 		String no = jedis.hget("car:01", "NO") ;
 		System.out.println("NO:" + no);
 	}
+
+
+    @Test
+    public void testKeys(){
+
+
+//        Set<String> expdaykeysSet = jedis.keys("expday*");
+        Set<String> expdaykeysSet = jedis.keys("devday*");
+        if(null!=expdaykeysSet && expdaykeysSet.size()>0){
+
+            for(String key: expdaykeysSet){
+                System.out.println("key : "+key);
+            }
+
+        }else{
+            System.out.println("未获取到expdaykeysSet信息!");
+        }
+
+    }
+
+
+    @Test
+    public void testDelKeys(){
+
+//        Set<String> expdaykeysSet = jedis.keys("expday*");
+        Set<String> expdaykeysSet = jedis.keys("devday*");
+        if(null!=expdaykeysSet && expdaykeysSet.size()>0){
+
+            for(String key: expdaykeysSet){
+                System.out.println("key : "+key);
+                long result  = jedis.del(key);
+                System.out.println("del key : "+key +", flag : "+result);
+            }
+
+        }else{
+            System.out.println("未获取到expdaykeysSet信息!");
+        }
+
+    }
+
+
+    @Test
+    public void testHashMap(){
+           HashMap map = new HashMap();
+        map.put("2018062215_1050001634_900100_9017_90000011_0","bbb");
+        System.out.println(map.get("2018062215_1050001634_900100_9017_90000011_0"));
+
+    }
 	
 }

@@ -34,7 +34,7 @@ public class ShardedJedisTest {
 	 * 构造函数
 	 */
 	public ShardedJedisTest() {
-		initialPool();
+//		initialPool();
 		initialShardedPool();
 		shardedJedis = shardedJedisPool.getResource();
 		jedis = jedisPool.getResource();
@@ -43,9 +43,9 @@ public class ShardedJedisTest {
 	private void initialPool() {
 		// 池基本配置
 		JedisPoolConfig config = new JedisPoolConfig();
-		config.setMaxActive(20);
+//		config.setMaxActive(20);
 		config.setMaxIdle(5);
-		config.setMaxWait(1000l);
+//		config.setMaxWait(1000l);
 		config.setTestOnBorrow(false);
 		jedisPool = new JedisPool(config, ip, 6379);
 	}
@@ -56,9 +56,9 @@ public class ShardedJedisTest {
 	private void initialShardedPool() {
 		// 池基本配置
 		JedisPoolConfig config = new JedisPoolConfig();
-		config.setMaxActive(20);
+//		config.setMaxActive(20);
 		config.setMaxIdle(5);
-		config.setMaxWait(1000l);
+//		config.setMaxWait(1000l);
 		config.setTestOnBorrow(false);
 		// slave链接
 		List<JedisShardInfo> shards = new ArrayList<JedisShardInfo>();

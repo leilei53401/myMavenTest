@@ -14,13 +14,13 @@ public class RedisShardPoolTest {
 
     static{
         JedisPoolConfig config =new JedisPoolConfig();//Jedis池配置
-        config.setMaxActive(500);//最大活动的对象个数
+//        config.setMaxActive(500);//最大活动的对象个数
         config.setMaxIdle(1000 * 60);//对象最大空闲时间
-        config.setMaxWait(1000 * 10);//获取对象时最大等待时间
+//        config.setMaxWait(1000 * 10);//获取对象时最大等待时间
         config.setTestOnBorrow(true);
-        String hostA = "172.16.42.20";
+        String hostA = "192.168.2.3";
         int portA = 6379;
-        String hostB = "172.16.42.21";
+        String hostB = "192.168.2.5";
         int portB = 6379;
         List<JedisShardInfo> jdsInfoList =new ArrayList<JedisShardInfo>(2);
         JedisShardInfo infoA = new JedisShardInfo(hostA, portA);
@@ -76,10 +76,14 @@ public class RedisShardPoolTest {
     	ShardedJedis jds = null;
         try {
             jds = pool.getResource();
-            System.out.println( jds.get("108")); 
-            System.out.println( jds.get("108-20170620")); 
+
+            jds.set("dev_test_20180507","1001");
+
+            System.out.println( jds.get("dev_test_20180507"));
+
+  /*          System.out.println( jds.get("108-20170620"));
             System.out.println( jds.get("108-ABCD5ffd91b8")); 
-            System.out.println( jds.get("108-ABCD5ffd91b8-20170620")); 
+            System.out.println( jds.get("108-ABCD5ffd91b8-20170620")); */
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
