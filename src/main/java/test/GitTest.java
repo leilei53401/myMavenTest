@@ -70,7 +70,7 @@ public class GitTest {
 
             System.out.println("work add  new  22222222");
 
-
+           System.out.println("2018-07-18 -- github add ");
 
         } catch (Exception e) {
             e.printStackTrace();
