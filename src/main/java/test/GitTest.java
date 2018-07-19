@@ -72,6 +72,10 @@ public class GitTest {
 
            System.out.println("2018-07-18 -- github add ");
 
+            System.out.println("2018-07-18 -- local add ");
+
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }
